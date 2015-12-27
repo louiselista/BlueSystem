@@ -1,0 +1,7 @@
+Options +FollowSymLinks -MultiViews
+# Turn mod_rewrite on
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{HTTP_REFERER} !^localhost [NC]
+RewriteRule ^(.*)$ index.php [L]
